@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+</head>
+<body>
+    <h1>Chatbot</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">$uBMiT</button>
+    </form>
+
+    {% if response %}
+        <h2>Response:</h2>
+        <pre>{{ response }}</pre>
+    {% endif %}
+</body>
+</html>
